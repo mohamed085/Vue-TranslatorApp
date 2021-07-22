@@ -1,12 +1,12 @@
 <template>
-  <div>
-    TranslateOutput
-  </div>
+  <h2 class="text-success">{{translateWord}}</h2>
 </template>
 
 <script>
 export default {
-  name: "TranslateOutput"
+  name: "TranslateOutput",
+  props:['translateWord']
+
 }
 </script>
 
