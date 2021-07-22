@@ -3,6 +3,12 @@
     <div class="col-md-6 col-md-offset-3">
       <form id="transForm" class="form-inline well" v-on:submit="formSubmit">
         <input class="form-control" type="text" v-model="textToTranslate" placeholder="Enter a Word...">
+        <select class="form-control" v-model="language">
+          <option value="ar">Arabic</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="zh">Chinese</option>
+        </select>
         <input class="btn btn-primary" type="submit" value="Translate">
       </form>
     </div>
@@ -14,8 +20,12 @@ export default {
   name: "TranslateForm",
   data() {
     return {
-      textToTranslate: ''
+      textToTranslate: '',
+      language:''
     }
+  },
+  created() {
+    this.language = 'ar';
   },
   methods: {
     formSubmit(e) {
@@ -27,5 +37,9 @@ export default {
 </script>
 
 <style scoped>
+#transForm{
+  border-radius:10px;
+  border: 1px #ccc solid;
+}
 
 </style>
