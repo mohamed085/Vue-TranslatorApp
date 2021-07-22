@@ -37,9 +37,5 @@ export default {
 </script>
 
 <style scoped>
-#transForm{
-  border-radius:10px;
-  border: 1px #ccc solid;
-}
 
 </style>
